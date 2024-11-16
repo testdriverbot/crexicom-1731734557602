@@ -1,0 +1,24 @@
+version: 4.1.27
+steps:
+  - prompt: Focus on the search input field.
+    commands:
+      - command: hover-text
+        text: Enter Location, Broker/Agent, or Description
+        description: search input field
+        action: click
+  - prompt: Enter a search query into the search field.
+    commands:
+      - command: type
+        text: Commercial Real Estate
+  - prompt: Click the "Search" button.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search button next to the input field
+        action: click
+  - prompt: >-
+      Assert that the search results are displayed correctly.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: search results for "Commercial Real Estate" are displayed
