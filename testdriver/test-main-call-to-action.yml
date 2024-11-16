@@ -1,0 +1,10 @@
+version: 4.1.27
+steps:
+  - prompt: >-
+      Identify the main call to action  # Use the content of the file from the
+      environment
+    commands:
+      - command: hover-text
+        text: Sign Up or Log In
+        description: main call to action button in the top right corner
+        action: click
