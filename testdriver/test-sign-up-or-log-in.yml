@@ -1,0 +1,18 @@
+version: 4.1.27
+steps:
+  - prompt: Click the "Sign Up or Log In" button.
+    commands:
+      - command: hover-text
+        text: Sign Up or Log In
+        description: button in the top right of the header
+        action: click
+  - prompt: Assert that the login/sign up modal or page loads.
+    commands:
+      - command: assert
+        expect: the "Sign Up" form is visible
+  - prompt: >-
+      Ensure no errors are displayed during this process.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: no error messages are visible
